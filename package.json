@@ -6,9 +6,11 @@
   "author": "Rizese",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^21.1.1"
+    "electron": "^21.1.1",
+    "http-server": "^14.1.1"
   },
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "start-browser": "http-server src -s --cors -o" 
   }
 }

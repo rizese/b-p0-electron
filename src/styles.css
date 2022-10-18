@@ -1,0 +1,22 @@
+body, .bp0bg, *  {
+    background-color: black;
+    color: #0af0af;
+    font-size: 0;
+    font-family: "Consolas", "Menlo", "IBM Plex Mono", "Monaco", monospace;
+}
+
+.hidden {
+    display: none;
+}
+
+mark {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 2px;
+    padding: 0px;
+    height: 10px;
+    width: 6px;
+    background-color: #0af0af;
+    box-shadow: 0 0 4px 1px #0af0af;
+    border-radius: 4px;
+}
