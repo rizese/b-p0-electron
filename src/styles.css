@@ -3,6 +3,7 @@ body, .bp0bg, *  {
     color: #0af0af;
     font-size: 0;
     font-family: "Consolas", "Menlo", "IBM Plex Mono", "Monaco", monospace;
+    overflow: hidden;
 }
 
 .hidden {

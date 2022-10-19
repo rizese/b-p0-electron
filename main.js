@@ -9,6 +9,12 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 800,
+    show: false,
+//    paintWhenInitiallyHidden: false,
+    fullscreen: true,
+    kiosk: true,
+    frame: false,
+    backgroundColor: '#000000',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
@@ -19,6 +25,10 @@ const createWindow = () => {
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
+
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.show()
+  })
 }
 
 // This method will be called when Electron has finished
