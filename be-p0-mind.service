@@ -1,0 +1,14 @@
+[Unit]
+Description=be-p0-mind
+
+[Service]
+ExecStart=/usr/bin/yarn electron .
+WorkingDirectory=/home/ricky/be-p0/be-p0-mind-electron
+Restart=always
+User=ricky
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/ricky/.Xauthority
+
+[Install]
+WantedBy=multi-user.target
