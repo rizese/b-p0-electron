@@ -1,6 +1,6 @@
 (() => {
 
-    const faces = ["happy", "neutral", "surprise", "unsure"];
+    const faces = ["happy", "neutral", "surprise", "unsure", "hiRes"];
     
     const getRandomInt = (max) => {
         return Math.floor(Math.random() * max);

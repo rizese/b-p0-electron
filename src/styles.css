@@ -18,6 +18,10 @@ body {
     -webkit-mask: url("public/masks/full-on.svg") center / 100% no-repeat;
   }
   
+  #bp0mask.hiRes {
+    -webkit-mask: url("public/masks/80x80-dots.svg") center / 100% no-repeat;
+  }
+
   #bp0mask.happy {
     -webkit-mask: url("public/masks/happy-face.svg") center / 100% no-repeat;
   }
