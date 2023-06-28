@@ -1,23 +1,39 @@
-body, .bp0bg, *  {
-    background-color: black;
-    color: #0af0af;
-    font-size: 0;
-    font-family: "Consolas", "Menlo", "IBM Plex Mono", "Monaco", monospace;
-    overflow: hidden;
-}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #000000 ;
+  
+  }
+  
+  #bp0mask {
+    width: 100%;
+    height: 100vh;
+    background-color: #0af0af ;
+    display: block;
+    margin: 0 auto;
+    -webkit-mask-composite: xor;
+    -webkit-mask: url("public/masks/full-on.svg") center / 100% no-repeat;
+  }
+  
+  #bp0mask.hiRes {
+    -webkit-mask: url("public/masks/80x80-dots.svg") center / 100% no-repeat;
+  }
 
-.hidden {
-    display: none;
-}
-
-mark {
-    display: inline-block;
-    box-sizing: border-box;
-    margin: 2px;
-    padding: 0px;
-    height: 10px;
-    width: 6px;
-    background-color: #0af0af;
-    box-shadow: 0 0 4px 1px #0af0af;
-    border-radius: 4px;
-}
+  #bp0mask.happy {
+    -webkit-mask: url("public/masks/happy-face.svg") center / 100% no-repeat;
+  }
+  
+  #bp0mask.neutral {
+    -webkit-mask: url("public/masks/neutral-face.svg") center / 100% no-repeat;
+  }
+  
+  #bp0mask.surprise {
+    -webkit-mask: url("public/masks/surprise-face.svg") center / 100% no-repeat;
+  }
+  
+  #bp0mask.unsure {
+    -webkit-mask: url("public/masks/unsure-face.svg") center / 100% no-repeat;
+  }

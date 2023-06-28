@@ -11,6 +11,6 @@
   },
   "scripts": {
     "start": "electron .",
-    "start-browser": "http-server src -s --cors -o" 
+    "start-browser": "http-server src -s --cors -o"
   }
 }
