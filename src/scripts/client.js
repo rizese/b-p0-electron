@@ -1,16 +1,17 @@
 (() => {
-
     const faces = ["happy", "neutral", "surprise", "unsure", "hiRes"];
-    
-    const getRandomInt = (max) => {
-        return Math.floor(Math.random() * max);
-    }
-    
+    let currentFaceIndex = 0;
+
     addEventListener('keydown', (event) => {
-        const face = document.getElementById('bp0mask')
-        const i = getRandomInt(faces.length)
-        face.className = ''
-        face.classList.add(faces[i])
+        const face = document.getElementById('bp0mask');
+        face.className = '';
+
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+            currentFaceIndex = (currentFaceIndex - 1 + faces.length) % faces.length;
+            face.classList.add(faces[currentFaceIndex]);
+        } else {
+            currentFaceIndex = (currentFaceIndex + 1) % faces.length;
+            face.classList.add(faces[currentFaceIndex]);
+        }
     });
- 
 })();
