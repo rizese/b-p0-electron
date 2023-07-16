@@ -4,7 +4,7 @@ Description=be-p0-mind
 [Service]
 ExecStart=/usr/bin/yarn electron .
 WorkingDirectory=/home/ricky/be-p0/be-p0-mind-electron
-Restart=always
+Restart=no
 User=ricky
 Environment=PATH=/usr/bin:/usr/local/bin
 Environment=DISPLAY=:0
