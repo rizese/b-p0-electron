@@ -1,0 +1,28 @@
+body {
+  background-color: #000;
+  color: #0af0af;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  padding: 20px;
+}
+#terminal {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.prompt {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+#input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #0af0af;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  padding: 0;
+}

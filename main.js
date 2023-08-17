@@ -1,16 +1,18 @@
 // main.js
 
 // Modules to control application life and create native browser window
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
+
+let mainWindow;
 
 const createWindow = () => {
   // Create the browser window.
-  const mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 800,
     height: 800,
     show: false,
-//    paintWhenInitiallyHidden: false,
+    //    paintWhenInitiallyHidden: false,
     fullscreen: true,
     kiosk: true,
     frame: false,
@@ -21,7 +23,7 @@ const createWindow = () => {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile(path.join(__dirname, 'src', 'index.html'))
+  mainWindow.loadFile(path.join(__dirname, 'src', 'face.html'))
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
@@ -50,6 +52,11 @@ app.whenReady().then(() => {
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit()
 })
+
+// Added code to load the prompt.html page when the index.html page is clicked
+ipcMain.on('load-page', (event, page) => {
+  mainWindow.loadFile(path.join(__dirname, 'src', page));
+});
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
