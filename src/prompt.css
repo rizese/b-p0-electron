@@ -3,8 +3,9 @@ body,
   background-color: #000;
   color: #0af0af;
   font-family: 'PixelOperator', sans-serif;
-  font-size: 2rem;
-  padding: 20px;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 #terminal {
@@ -139,7 +140,8 @@ body,
 }
 
 .pixel-operator-bold {
-  font-family: 'PixelOperator-Bold', sans-serif;
+  font-family: 'PixelOperator', sans-serif;
+  font-weight: bold;
 }
 
 .pixel-operator8 {
@@ -147,7 +149,8 @@ body,
 }
 
 .pixel-operator8-bold {
-  font-family: 'PixelOperator8-Bold', sans-serif;
+  font-family: 'PixelOperator8', sans-serif;
+  font-weight: bold;
 }
 
 .pixel-operator-hb {
@@ -159,7 +162,8 @@ body,
 }
 
 .pixel-operator-mono-bold {
-  font-family: 'PixelOperatorMono-Bold', sans-serif;
+  font-family: 'PixelOperatorMono', sans-serif;
+  font-weight: bold;
 }
 
 .pixel-operator-mono8 {
@@ -167,7 +171,8 @@ body,
 }
 
 .pixel-operator-mono8-bold {
-  font-family: 'PixelOperatorMono8-Bold', sans-serif;
+  font-family: 'PixelOperatorMono8', sans-serif;
+  font-weight: bold;
 }
 
 .pixel-operator-monohb {
@@ -179,5 +184,6 @@ body,
 }
 
 .pixel-operator-sc-bold {
-  font-family: 'PixelOperatorSC-Bold', sans-serif;
+  font-family: 'PixelOperatorSC', sans-serif;
+  font-weight: bold;
 }
