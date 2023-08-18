@@ -1,10 +1,12 @@
-body {
+body,
+* {
   background-color: #000;
   color: #0af0af;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
+  font-family: 'PixelOperator', sans-serif;
+  font-size: 2rem;
   padding: 20px;
 }
+
 #terminal {
   width: 100%;
   height: 80vh;
@@ -12,17 +14,170 @@ body {
   flex-direction: column;
   justify-content: flex-end;
 }
+
 .prompt {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
 #input {
   width: 100%;
   border: none;
   outline: none;
+  font-family: inherit;
   background-color: transparent;
   color: #0af0af;
-  font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   padding: 0;
+}
+
+#progress-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #666;
+}
+
+#progress {
+  /* height: 5px; */
+  width: 0%;
+  background-color: ##0af0af;
+}
+
+/* src/public/styles/fonts.css */
+@font-face {
+  font-family: 'PixelOperator';
+  src: url('public/pixel_operator/PixelOperator.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PixelOperator';
+  src: url('public/pixel_operator/PixelOperator-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PixelOperator8';
+  src: url('public/pixel_operator/PixelOperator8.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PixelOperator8';
+  src: url('public/pixel_operator/PixelOperator8-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PixelOperatorHB';
+  src: url('public/pixel_operator/PixelOperatorHB.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PixelOperatorMono';
+  src: url('public/pixel_operator/PixelOperatorMono.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PixelOperatorMono';
+  src: url('public/pixel_operator/PixelOperatorMono-Bold.ttf')
+    format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PixelOperatorMono8';
+  src: url('public/pixel_operator/PixelOperatorMono8.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PixelOperatorMono8';
+  src: url('public/pixel_operator/PixelOperatorMono8-Bold.ttf')
+    format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PixelOperatorMonoHB';
+  src: url('public/pixel_operator/PixelOperatorMonoHB.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PixelOperatorSC';
+  src: url('public/pixel_operator/PixelOperatorSC.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PixelOperatorSC';
+  src: url('public/pixel_operator/PixelOperatorSC-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* do no merge - for playing with */
+.pixel-operator {
+  font-family: 'PixelOperator', sans-serif;
+}
+
+.pixel-operator-bold {
+  font-family: 'PixelOperator-Bold', sans-serif;
+}
+
+.pixel-operator8 {
+  font-family: 'PixelOperator8', sans-serif;
+}
+
+.pixel-operator8-bold {
+  font-family: 'PixelOperator8-Bold', sans-serif;
+}
+
+.pixel-operator-hb {
+  font-family: 'PixelOperatorHB', sans-serif;
+}
+
+.pixel-operator-mono {
+  font-family: 'PixelOperatorMono', sans-serif;
+}
+
+.pixel-operator-mono-bold {
+  font-family: 'PixelOperatorMono-Bold', sans-serif;
+}
+
+.pixel-operator-mono8 {
+  font-family: 'PixelOperatorMono8', sans-serif;
+}
+
+.pixel-operator-mono8-bold {
+  font-family: 'PixelOperatorMono8-Bold', sans-serif;
+}
+
+.pixel-operator-monohb {
+  font-family: 'PixelOperatorMonoHB', sans-serif;
+}
+
+.pixel-operator-sc {
+  font-family: 'PixelOperatorSC', sans-serif;
+}
+
+.pixel-operator-sc-bold {
+  font-family: 'PixelOperatorSC-Bold', sans-serif;
 }

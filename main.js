@@ -13,8 +13,8 @@ const createWindow = () => {
     height: 800,
     show: false,
     //    paintWhenInitiallyHidden: false,
-    fullscreen: true,
-    kiosk: true,
+    fullscreen: false,
+    kiosk: false,
     frame: false,
     backgroundColor: '#000000',
     webPreferences: {
