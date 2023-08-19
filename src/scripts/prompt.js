@@ -1,5 +1,5 @@
 (() => {
-    const DEBOUNCE_LIMIT = 10 * 1000; // 10 seconds
+    const DEBOUNCE_LIMIT = 100 * 1000;
     const PROGRESS_UPDATE = 100;
 
     let timeout;
@@ -46,6 +46,13 @@
 
     document.addEventListener('DOMContentLoaded', () => {
         debouncedLoadFacePage();
+
+        // Focus on the last element with the autofocus attribute (the prompt input)
+        var elements = document.querySelectorAll('[autofocus]');
+        if (elements.length > 0) {
+            var lastElement = elements[elements.length - 1];
+            lastElement.focus();
+        }
     });
 
     async function fetchData() {
@@ -66,4 +73,5 @@
         }
         debouncedLoadFacePage();
     });
+
 })();

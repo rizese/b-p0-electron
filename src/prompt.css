@@ -1,5 +1,4 @@
-body,
-* {
+body {
   background-color: #000;
   color: #0af0af;
   font-family: 'PixelOperator', sans-serif;
@@ -8,17 +7,51 @@ body,
   padding: 0;
 }
 
+* {
+  font-family: inherit;
+}
+
+*::selection {
+  color: #000000;
+  background-color: #0af0af80;
+}
+
 #terminal {
-  width: 100%;
-  height: 80vh;
+  height: 98vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  padding: 0 5%;
 }
 
 .prompt {
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+.self-response {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.self-response .bubble {
+  color: #000000;
+  background-color: #0af0af;
+  padding: 0.4rem 0.6rem;
+  max-width: 70%;
+  min-width: 4rem;
+  border-radius: 0.5rem 0.5rem 0rem 0.5rem;
+  word-wrap: break-word;
+  margin-bottom: 0.2rem;
+}
+
+.self-response .label {
+  font-size: 12px;
+  color: #888;
+  margin-right: 10px;
 }
 
 #input {
@@ -28,8 +61,6 @@ body,
   font-family: inherit;
   background-color: transparent;
   color: #0af0af;
-  font-size: 20px;
-  padding: 0;
 }
 
 #progress-container {
@@ -42,9 +73,9 @@ body,
 }
 
 #progress {
-  /* height: 5px; */
+  height: 4px;
   width: 0%;
-  background-color: ##0af0af;
+  background-color: #0af0af;
 }
 
 /* src/public/styles/fonts.css */
@@ -134,56 +165,13 @@ body,
   font-style: normal;
 }
 
-/* do no merge - for playing with */
-.pixel-operator {
-  font-family: 'PixelOperator', sans-serif;
-}
-
-.pixel-operator-bold {
-  font-family: 'PixelOperator', sans-serif;
-  font-weight: bold;
-}
-
-.pixel-operator8 {
-  font-family: 'PixelOperator8', sans-serif;
-}
-
-.pixel-operator8-bold {
-  font-family: 'PixelOperator8', sans-serif;
-  font-weight: bold;
-}
-
-.pixel-operator-hb {
-  font-family: 'PixelOperatorHB', sans-serif;
-}
-
 .pixel-operator-mono {
   font-family: 'PixelOperatorMono', sans-serif;
+  text-rendering: geometricPrecision;
 }
 
 .pixel-operator-mono-bold {
   font-family: 'PixelOperatorMono', sans-serif;
   font-weight: bold;
-}
-
-.pixel-operator-mono8 {
-  font-family: 'PixelOperatorMono8', sans-serif;
-}
-
-.pixel-operator-mono8-bold {
-  font-family: 'PixelOperatorMono8', sans-serif;
-  font-weight: bold;
-}
-
-.pixel-operator-monohb {
-  font-family: 'PixelOperatorMonoHB', sans-serif;
-}
-
-.pixel-operator-sc {
-  font-family: 'PixelOperatorSC', sans-serif;
-}
-
-.pixel-operator-sc-bold {
-  font-family: 'PixelOperatorSC', sans-serif;
-  font-weight: bold;
+  text-rendering: geometricPrecision;
 }
