@@ -1,5 +1,5 @@
 (() => {
-    const DEBOUNCE_LIMIT = 100 * 1000;
+    const DEBOUNCE_LIMIT = 5 * 1000; // 5 seconds
     const PROGRESS_UPDATE = 100;
 
     let timeout;

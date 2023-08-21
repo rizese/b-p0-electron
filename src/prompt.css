@@ -16,17 +16,12 @@ body {
   background-color: #0af0af80;
 }
 
-#terminal {
+#prompt {
   height: 98vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 0 5%;
-}
-
-.prompt {
-  white-space: pre-wrap;
-  word-wrap: break-word;
 }
 
 .self-response {
@@ -61,6 +56,9 @@ body {
   font-family: inherit;
   background-color: transparent;
   color: #0af0af;
+  margin-left: -0.1rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 #progress-container {
@@ -78,42 +76,6 @@ body {
   background-color: #0af0af;
 }
 
-/* src/public/styles/fonts.css */
-@font-face {
-  font-family: 'PixelOperator';
-  src: url('public/pixel_operator/PixelOperator.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PixelOperator';
-  src: url('public/pixel_operator/PixelOperator-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PixelOperator8';
-  src: url('public/pixel_operator/PixelOperator8.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PixelOperator8';
-  src: url('public/pixel_operator/PixelOperator8-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PixelOperatorHB';
-  src: url('public/pixel_operator/PixelOperatorHB.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 @font-face {
   font-family: 'PixelOperatorMono';
   src: url('public/pixel_operator/PixelOperatorMono.ttf') format('truetype');
@@ -126,43 +88,6 @@ body {
   src: url('public/pixel_operator/PixelOperatorMono-Bold.ttf')
     format('truetype');
   font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PixelOperatorMono8';
-  src: url('public/pixel_operator/PixelOperatorMono8.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PixelOperatorMono8';
-  src: url('public/pixel_operator/PixelOperatorMono8-Bold.ttf')
-    format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PixelOperatorMonoHB';
-  src: url('public/pixel_operator/PixelOperatorMonoHB.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PixelOperatorSC';
-  src: url('public/pixel_operator/PixelOperatorSC.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PixelOperatorSC';
-  src: url('public/pixel_operator/PixelOperatorSC-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
 }
 
 .pixel-operator-mono {
