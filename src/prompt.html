@@ -10,19 +10,22 @@
     <script type="text/javascript" src="./scripts/prompt.js"></script>
   </head>
   <body>
-    <div id="terminal">
-      <div class="prompt">C:\> <input id="input" type="text" autofocus /></div>
+    <div id="prompt" class="pixel-operator-mono-bold">
+      <div class="self-response">
+        <div class="bubble">Hi..</div>
+        <div class="bubble">I'm BE-P0!</div>
+        <div class="bubble">Want to know something cool?</div>
+        <div class="label">2 seconds ago</div>
+      </div>
+      <div class="friend-response">
+        <div class="pixel-operator-mono">
+          No, sorry. I have a question I want to ask
+        </div>
+      </div>
+      <textarea id="input" spellcheck="false" autofocus></textarea>
     </div>
-    <div
-      style="
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        height: 5px;
-        width: 100%;
-        background-color: #666;
-      "
-    >
+    <div id="progress-container">
+      <div id="progress"></div>
     </div>
   </body>
 </html>

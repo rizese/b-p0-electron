@@ -1,11 +1,30 @@
 (() => {
+    const DEBOUNCE_LIMIT = 5 * 1000; // 5 seconds
+    const PROGRESS_UPDATE = 100;
+
     let timeout;
     let fetchInProgress = false; // Flag for checking whether an asynchronous fetch is in progress
+    let timePassed = 0;
+
+    function updateProgressBar() {
+        const progressBar = document.getElementById('progress');
+        const progress = (timePassed / DEBOUNCE_LIMIT) * 100;
+        progressBar.style.width = `${progress}%`;
+    }
 
     function debounce(callback, wait) {
         return function () {
-            clearTimeout(timeout);
-            timeout = setTimeout(callback, wait);
+            clearInterval(timeout);
+            timePassed = 0;
+            updateProgressBar();
+            timeout = setInterval(() => {
+                timePassed += PROGRESS_UPDATE;
+                updateProgressBar();
+                if (timePassed >= wait) {
+                    clearInterval(timeout);
+                    callback();
+                }
+            }, PROGRESS_UPDATE);
         };
     }
 
@@ -15,14 +34,25 @@
         }
     }
 
-    const debouncedLoadFacePage = debounce(loadFacePage, 10000); // 10 seconds
+    const debouncedLoadFacePage = debounce(loadFacePage, DEBOUNCE_LIMIT);
 
-    document.addEventListener('keydown', () => {
-        debouncedLoadFacePage();
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            loadFacePage();
+        } else {
+            debouncedLoadFacePage();
+        }
     });
 
     document.addEventListener('DOMContentLoaded', () => {
         debouncedLoadFacePage();
+
+        // Focus on the last element with the autofocus attribute (the prompt input)
+        var elements = document.querySelectorAll('[autofocus]');
+        if (elements.length > 0) {
+            var lastElement = elements[elements.length - 1];
+            lastElement.focus();
+        }
     });
 
     async function fetchData() {
@@ -33,21 +63,15 @@
         debouncedLoadFacePage(); // Restart the timer after the fetch is completed
     }
 
-    // Fetch data when needed
-    // fetchData();
-
     const inputElem = document.getElementById('input');
     inputElem.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
             event.preventDefault();
             const command = inputElem.value;
             inputElem.value = '';
-            // Handle the command here
             console.log(`Command entered: ${command}`);
-            // If you need to fetch data based on the command, you can call the fetchData function here
-            // fetchData();
         }
-        // Restart the timer every time a key is pressed
         debouncedLoadFacePage();
     });
+
 })();
