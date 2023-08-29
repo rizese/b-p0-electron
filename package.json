@@ -6,7 +6,7 @@
   "author": "Rizese",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^21.1.1",
+    "electron": "^26.0.0",
     "electron-devtools-installer": "^3.2.0",
     "http-server": "^14.1.1"
   },
