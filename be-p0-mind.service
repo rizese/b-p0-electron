@@ -2,7 +2,7 @@
 Description=be-p0-mind
 
 [Service]
-ExecStart=/usr/bin/yarn electron .
+ExecStart=/usr/bin/npm electron .
 WorkingDirectory=/home/ricky/be-p0/be-p0-mind-electron
 Restart=no
 User=ricky
